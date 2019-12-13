@@ -19,5 +19,6 @@ html {
 }
 
 body {
-  color: #676767;
+  color: var(--color-primary-800);
+  background-color: var(--color-primary-100);
 }

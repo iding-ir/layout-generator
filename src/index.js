@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./css/vars.css";
 import "./css/reset.css";
 import "./css/fonts.css";
 import "./css/index.css";
