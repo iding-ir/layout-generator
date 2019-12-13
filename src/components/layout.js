@@ -7,12 +7,12 @@ class Layout extends Component {
 
     return (
       <div className="layout-container">
-        {layout.map(item => {
+        {layout.map((item, index) => {
           let className = "layout-" + item;
           let text = item;
 
           return (
-            <div className={className}>
+            <div key={index} className={className}>
               <div className="layout-content">
                 <span>{text}</span>
               </div>
