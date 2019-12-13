@@ -25,13 +25,17 @@ class App extends Component {
   }
 
   render() {
-    let { layout, inputs } = this.state;
+    let { inputs, selected, layout } = this.state;
 
     return (
       <div className="app">
         <Layout layout={layout} />
 
-        <Controls inputs={inputs} onChangeLayout={this.handleChangeLayout} />
+        <Controls
+          inputs={inputs}
+          selected={selected}
+          onChangeLayout={this.handleChangeLayout}
+        />
       </div>
     );
   }

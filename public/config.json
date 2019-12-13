@@ -1,4 +1,4 @@
 {
-    "inputs": ["XL", "XL/L/L", "XL/L/2SM"],
+    "inputs": ["XL", "2XL", "4L", "XL/2L", "XL/L/2SM"],
     "initial": 0
 }
