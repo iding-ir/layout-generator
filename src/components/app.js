@@ -1,22 +1,42 @@
 import React, { Component } from "react";
 import "./app.css";
 import Layout from "./layout";
+import Controls from "./controls";
 
 class App extends Component {
   state = {
-    input: "XL/L/2SM",
+    inputs: ["XL", "XL/L/L", "XL/L/2SM"],
+    selected: "",
     layout: []
   };
 
   componentDidMount() {
-    this.parseLayout(this.state.input);
+    let selected = this.state.inputs[0];
+
+    this.setState({ selected });
+
+    this.parseLayout(selected);
   }
 
   render() {
-    let layout = this.state.layout;
+    let { layout, inputs } = this.state;
 
-    return <Layout layout={layout} />;
+    return (
+      <div className="app">
+        <Layout layout={layout} />
+
+        <Controls inputs={inputs} onChangeLayout={this.handleChangeLayout} />
+      </div>
+    );
   }
+
+  handleChangeLayout = event => {
+    let selected = event.target.value;
+
+    this.setState({ selected });
+
+    this.parseLayout(selected);
+  };
 
   parseLayout = layoutString => {
     let layoutArray = layoutString.split("/");
