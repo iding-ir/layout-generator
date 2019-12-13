@@ -1,36 +1,14 @@
 import React, { Component } from "react";
 import "./app.css";
+import Layout from "./layout";
 
 class App extends Component {
-  state = {};
+  state = {
+    layout: ["xl", "l", "sm", "sm"]
+  };
+
   render() {
-    return (
-      <div className="layout-container">
-        <div className="layout-xl">
-          <div className="layout-content">
-            <span>LG</span>
-          </div>
-        </div>
-
-        <div className="layout-l">
-          <div className="layout-content">
-            <span>L</span>
-          </div>
-        </div>
-
-        <div className="layout-sm">
-          <div className="layout-content">
-            <span>SM</span>
-          </div>
-        </div>
-
-        <div className="layout-sm">
-          <div className="layout-content">
-            <span>SM</span>
-          </div>
-        </div>
-      </div>
-    );
+    return <Layout layout={this.state.layout} />;
   }
 }
 
