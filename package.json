@@ -24,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/iding-ir/layout-generator/issues"
   },
-  "homepage": "https://github.com/iding-ir/layout-generator#readme",
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
