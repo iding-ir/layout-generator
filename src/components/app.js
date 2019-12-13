@@ -5,17 +5,23 @@ import Controls from "./controls";
 
 class App extends Component {
   state = {
-    inputs: ["XL", "XL/L/L", "XL/L/2SM"],
+    inputs: [],
     selected: "",
     layout: []
   };
 
   componentDidMount() {
-    let selected = this.state.inputs[0];
+    fetch("./config.json")
+      .then(response => response.json())
+      .then(json => {
+        let { inputs, initial } = json;
 
-    this.setState({ selected });
+        let selected = inputs[initial];
 
-    this.parseLayout(selected);
+        this.setState({ inputs, selected });
+
+        this.parseLayout(selected);
+      });
   }
 
   render() {
