@@ -3,18 +3,17 @@ import "./layout.css";
 
 class Layout extends Component {
   render() {
-    let layout = this.props.layout;
+    let { layout } = this.props;
 
     return (
       <div className="layout-container">
         {layout.map((item, index) => {
           let className = "layout-" + item;
-          let text = item;
 
           return (
             <div key={index} className={className}>
               <div className="layout-content">
-                <span>{text}</span>
+                <span>{item}</span>
               </div>
             </div>
           );
