@@ -13,7 +13,9 @@
     "url": "git+https://github.com/iding-ir/layout-generator.git"
   },
   "keywords": [
-    "React", "HTML5", "CSS"
+    "React",
+    "HTML5",
+    "CSS"
   ],
   "author": {
     "name": "Aydin Ghane Kh.",
